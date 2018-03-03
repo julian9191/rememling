@@ -223,6 +223,130 @@ var objeto = {
     {
       "english": "deep down I know",
       "spanish": "en el fondo lo sé"
+    },
+    {
+      "english": "I now him by sight",
+      "spanish": "lo conozco de vista"
+    },
+    {
+      "english": "he talks behind his back",
+      "spanish": "el habla a sus espaldas"
+    },
+    {
+      "english": "that means that I put the information with which I'm going to learn",
+      "spanish": "eso significa que yo mismo meto la información con la que voy a aprender"
+    },
+    {
+      "english": "I think I remember that the application I was talking about is speak",
+      "spanish": "yo creo recordar que la aplicación de la que hablaba es speak"
+    },
+    {
+      "english": "I need to overcome this obstacle",
+      "spanish": "Necesito superar este obstáculo"
+    },
+    {
+      "english": "It is a common mistake in this regard",
+      "spanish": "es un error común en este aspecto"
+    },
+    {
+      "english": "I ask God to be like that",
+      "spanish": "le pido a Dios que así sea"
+    },
+    {
+      "english": "maybe that's a stop to get there",
+      "spanish": "maybe that's a stop to get there"
+    },
+    {
+      "english": "If I read, it is too much trouble to look up new words in a dictionary",
+      "spanish": "Si leo, es demasiado problema buscar nuevas palabras en un diccionario."
+    },
+    {
+      "english": "And even if I do look them up",
+      "spanish": "E incluso si los busco"
+    },
+    {
+      "english": "It is all quite frustrating",
+      "spanish": "Todo es bastante frustrante"
+    },
+    {
+      "english": "i know i can work on feel and pronunciation",
+      "spanish": "Sé que puedo trabajar en la sensación y la pronunciación"
+    },
+    {
+      "english": "many more than the post office",
+      "spanish": "muchos más que la oficina de correos"
+    },
+    {
+      "english": "The same phrases are used over and over",
+      "spanish": "Las mismas frases se usan una y otra vez"
+    },
+    {
+      "english": "You have to combine the words you have learned in a certain way so that the meaning is clear",
+      "spanish": "Tienes que combinar las palabras que has aprendido de cierta manera para que el significado sea claro"
+    },
+    {
+      "english": "the importance of phrases is widely recognized.",
+      "spanish": "la importancia de las frases es ampliamente reconocida."
+    },
+    {
+      "english": "The Linguist is the first system created which speeds up the learning of phrases in their natural context",
+      "spanish": "El lingüista es el primer sistema creado que acelera el aprendizaje de frases en su contexto natural."
+    },
+    {
+      "english": "that can help you get a feel for how to overcome these problems",
+      "spanish": "eso puede ayudarte a tener una idea de cómo superar estos problemas"
+    },
+    {
+      "english": "I'll ask you to start with the next sentence.",
+      "spanish": "te voy a pedir empezar con la siguiente oración"
+    },
+    {
+      "english": "face your fears",
+      "spanish": "enfrenta tus miedos"
+    },
+    {
+      "english": "Inglés",
+      "spanish": "Español"
+    },
+    {
+      "english": "so here's the deal, guys",
+      "spanish": "así que aquí está el trato, chicos"
+    },
+    {
+      "english": "that's quite common",
+      "spanish": "eso es bastante común"
+    },
+    {
+      "english": "as long as you're paying attention",
+      "spanish": "siempre y cuando estés prestando atención"
+    },
+    {
+      "english": "words that get reduced",
+      "spanish": "palabras que se reducen"
+    },
+    {
+      "english": "what you doing later",
+      "spanish": "que vas a hacer mas tarde"
+    },
+    {
+      "english": "we take off the 'ex'",
+      "spanish": "nos quitamos el 'ex'"
+    },
+    {
+      "english": "I need to get used to that accent",
+      "spanish": "necesito acostumbrarme a ese acento"
+    },
+    {
+      "english": "Thought leaders will share their stories",
+      "spanish": "Los líderes del pensamiento compartirán sus historias"
+    },
+    {
+      "english": "An Insight to Innovation",
+      "spanish": "Una visión de la innovación"
+    },
+    {
+      "english": "I encourage you to listen to English on a daily basis",
+      "spanish": "Te animo a escuchar inglés diariamente"
     }
   ]
 };

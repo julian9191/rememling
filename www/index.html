@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/objeto.js"></script>
+  <script src="js/pagesMapper.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/controladores/enOrden.js"></script>
+  <script src="js/controladores/aleatoriosAprendidos.js"></script>
 
   <script>
     ons.ready(function() {
@@ -39,23 +42,23 @@
     <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
       <ons-page>
         <ons-list>
-          <ons-list-item onclick="fn.load('home.html')" tappable>
-            Inicio
+          <ons-list-item onclick="changePage('en-orden.html')" tappable>
+            En orden
           </ons-list-item>
-          <ons-list-item onclick="fn.load('settings.html')" tappable>
-            Configuración
+          <ons-list-item onclick="changePage('aleatorios-aprendidos.html')" tappable>
+            Aleatorios Aprendidos
           </ons-list-item>
-          <ons-list-item onclick="fn.load('about.html')" tappable>
-            Acerca de
+          <ons-list-item onclick="changePage('todos-aleatorios.html')" tappable>
+            Todos Aleatorios
           </ons-list-item>
         </ons-list>
       </ons-page>
     </ons-splitter-side>
-    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+    <ons-splitter-content id="content" page="en-orden.html"></ons-splitter-content>
   </ons-splitter>
 
-  <ons-template id="home.html">
-    <ons-page>
+  <ons-template id="en-orden.html">
+    <ons-page id="foobar_enOrden">
       <ons-toolbar>
         <div class="left">
           <ons-toolbar-button onclick="fn.open()">
@@ -63,17 +66,17 @@
           </ons-toolbar-button>
         </div>
         <div class="center">
-          Inicio
+          En orden
         </div>
       </ons-toolbar>
       
       
       <div style="text-align: center; padding: 1em;">
-        <h4 id="posicion"></h4>
-        <h1 id="spanish">Español</h1>
+        <h4 class="posicion"></h4>
+        <h1 class="spanish">Español</h1>
         <input type="button" class="btn btn-danger" value="Mostrar" onclick='motrarTraduccion()' />
-        <div id='englishContent'>
-            <h2 id="english">Inglés</h2>
+        <div class='englishContent'>
+            <h2 class="english">Inglés</h2>
             <div>
                 <button id='escuchar'class="btn btn-primary" onclick='mostrar()'>
                     <i class="ion-volume-high"></i>
@@ -98,8 +101,8 @@
     </ons-page>
   </ons-template>
 
-  <ons-template id="settings.html">
-  <ons-page>
+  <ons-template id="aleatorios-aprendidos.html">
+  <ons-page id="foobar_aleatoriosAprendidos">
     <ons-toolbar>
       <div class="left">
         <ons-toolbar-button onclick="fn.open()">
@@ -107,14 +110,38 @@
         </ons-toolbar-button>
       </div>
       <div class="center">
-        Settings
+        Aleatorios Aprendidos
       </div>
     </ons-toolbar>
+    
+    <div style="text-align: center; padding: 1em;">
+        <h4 class="posicion"></h4>
+        <h1 class="spanish">Español</h1>
+        <input type="button" class="btn btn-danger" value="Mostrar" onclick='motrarTraduccion()' />
+        <div class='englishContent'>
+            <h2 class="english">Inglés</h2>
+            <div>
+                <button id='escuchar'class="btn btn-primary" onclick='mostrar()'>
+                    <i class="ion-volume-high"></i>
+                    <span class="menu-label">Escuchar</span>
+                </button>
+                <audio class="" hidden class="speech"></audio>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <button class="btn btn-lg btn-dark" onclick='siguienteAleatoriosAprendidos()'>
+                &nbsp;<i class="ion-arrow-right-b"></i>&nbsp;
+            </button>
+        </div>
+    </div>
+    
+    
   </ons-page>
   </ons-template>
 
-  <ons-template id="about.html">
-  <ons-page>
+  <ons-template id="todos-aleatorios.html">
+  <ons-page id="foobar_todosAleatorios">
     <ons-toolbar>
       <div class="left">
         <ons-toolbar-button onclick="fn.open()">
@@ -122,11 +149,12 @@
         </ons-toolbar-button>
       </div>
       <div class="center">
-        About
+        Todos Aleatorios
       </div>
     </ons-toolbar>
   </ons-page>
   </ons-template>
+  
 
 </body>
 </html>
