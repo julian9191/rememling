@@ -24,10 +24,10 @@ function addTodo(camera_url) {
 };
 
 
-function mostrar(){
-   var texto = encodeURIComponent(objeto.sentences[posicion].english);
+function sonar(pos){
+   var texto = encodeURIComponent(objeto.sentences[pos].english);
    var  url = "https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q="+texto;
-   $("audio").attr("src", url).get(0).play();
+   $(".audio").attr("src", url).get(0).play();
 }
 
 function motrarTraduccion(){ 

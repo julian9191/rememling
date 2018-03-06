@@ -10,6 +10,10 @@ function init_enOrden(){
     siguiente();
 }
 
+function sonarEnOrden(){
+    sonar(posicion);
+}
+
 
 function siguiente(){
     cambiarPosicion(1);
