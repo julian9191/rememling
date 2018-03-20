@@ -7,7 +7,7 @@ function init_palabraActual(){
         return;
     }
     
-    ruta = "https://wordbitweb.000webhostapp.com/data-app.php?callback=1";   
+    ruta = "https://wordbitweb.000webhostapp.com//word-app.php?&callback=1";   
      $.ajax({
         type: 'GET',
         crossDomain: true,
@@ -15,6 +15,7 @@ function init_palabraActual(){
         url: ruta,
         success: function(data){
             palabraActual = data;
+            imprimirPalabraActual();
         },
         error: function(data){
             alert("Error obteniendo la palabra");
@@ -23,41 +24,43 @@ function init_palabraActual(){
     
 }
 
-/*function siguientePalabraActual(){
-
-    posicionPalabras = Math.floor(Math.random() * (posicionesNoUsadasPalabras.length-1)) + 0;
-    posicionesNoUsadasPalabras.splice(posicionPalabras, 1);
-    
-    if(posicionesNoUsadasPalabras.length == 0){
-        posicionesNoUsadasPalabras = palabras.slice();
-    }
-    
-    
-    visible = false;
-    var index = palabras.indexOf(posicionesNoUsadasPalabras[posicionPalabras]);
-    if (index > -1) {
-        $(".posicion").html((index+1)+"/"+(palabras.length-1));
-    }else{
-         $(".posicion").html("");
-    }
-    
-     $(".englishContent").hide();
-    imprimirPalabra(posicionPalabras);
+function imprimirPalabraActual(){
+    $(".posicion").html(palabraActual.idwords);
+    $(".spanish").html(palabraActual.spanish);
+    $(".english").html(palabraActual.english);
+    $(".sentence").html(palabraActual.sentence);
 }
 
-function imprimirPalabraActual(p){
-    $(".spanish").html(posicionesNoUsadasPalabras[p].spanish);
-    $(".english").html(posicionesNoUsadasPalabras[p].english);
-    $(".sentence").html(posicionesNoUsadasPalabras[p].sentence);
+function palabraActualAprendida(){
+
+    if (!confirm("Está seguro de que quiere marcar esta palabra como aprendida?"))
+    {
+        return;
+    }
+
+    ruta = "https://wordbitweb.000webhostapp.com//update-app.php?idwords="+palabraActual.idwords+"&callback=1";   
+     $.ajax({
+        type: 'GET',
+        crossDomain: true,
+        dataType: 'jsonp',
+        url: ruta,
+        success: function(data){
+            alert(data);
+            init_palabraActual();
+        },
+        error: function(data){
+            alert("Error obteniendo la palabra");
+        }
+    });
 }
 
 function sonarPalabraActual(opcion){
     var texto = "";
     if(opcion==1){
-        texto = encodeURIComponent(posicionesNoUsadasPalabras[posicionPalabras].english);
+        texto = encodeURIComponent(palabraActual.english);
         
     }else{
-        texto = encodeURIComponent(posicionesNoUsadasPalabras[posicionPalabras].sentence);
+        texto = encodeURIComponent(palabraActual.sentence);
     }
     if(texto!=""){
         var  url = "https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q="+texto;
@@ -65,4 +68,4 @@ function sonarPalabraActual(opcion){
     }
     
      
-}*/
+}
