@@ -17,6 +17,7 @@
   <script src="js/controladores/enOrden.js"></script>
   <script src="js/controladores/aleatoriosAprendidos.js"></script>
   <script src="js/controladores/palabras.js"></script>
+  <script src="js/controladores/palabraActual.js"></script>
 
   <script>
     ons.ready(function() {
@@ -51,6 +52,9 @@
           </ons-list-item>
           <ons-list-item onclick="changePage('palabras.html')" tappable>
             Palaras
+          </ons-list-item>
+          <ons-list-item onclick="changePage('palabra-actual.html')" tappable>
+            Palara actual
           </ons-list-item>
         </ons-list>
       </ons-page>
@@ -151,6 +155,52 @@
       </div>
       <div class="center">
         Palaras
+      </div>
+    </ons-toolbar>
+    
+    
+    <div style="text-align: center; padding: 1em;">
+        <h4 class="posicion"></h4>
+        <h1 class="spanish">Español</h1>
+        <input type="button" class="btn btn-danger" value="Mostrar" onclick='motrarTraduccion()' />
+        <div class='englishContent'>
+            <h2 class="english">Inglés</h2>
+            <p class="sentence">Inglés</p>
+            <div>
+                <button id='escuchar'class="btn btn-primary" onclick='sonarPalabra(1)'>
+                    <i class="ion-volume-high"></i>
+                    <span class="menu-label">Palabra</span>
+                </button>
+                <button id='escuchar'class="btn btn-warning" onclick='sonarPalabra(2)'>
+                    <i class="ion-volume-high"></i>
+                    <span class="menu-label">Frase</span>
+                </button>
+                <audio class='audio' class="" hidden class="speech"></audio>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <button class="btn btn-lg btn-dark" onclick='siguientePalabra()'>
+                &nbsp;<i class="ion-arrow-right-b"></i>&nbsp;
+            </button>
+        </div>
+    </div>
+    
+    
+  </ons-page>
+  </ons-template>
+  
+  
+  <ons-template id="palabra-actual.html">
+  <ons-page id="foobar_palabras">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Palara Actual
       </div>
     </ons-toolbar>
     

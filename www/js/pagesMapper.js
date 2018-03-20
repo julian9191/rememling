@@ -6,7 +6,8 @@ $(document).ready(function(){
     pagesMapper = {
       "en-orden.html": init_enOrden,
       "aleatorios-aprendidos.html": init_aleatoriosAprendidos,
-      "palabras.html": init_palabras
+      "palabras.html": init_palabras,
+      "palabra-actual.html": init_palabraActual
     }
     
     pagesMapper[paginaActual]();
