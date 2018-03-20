@@ -2,11 +2,7 @@
 let palabraActual = {};
 
 function init_palabraActual(){
-    if(palabras.length>0){
-        siguientePalabra();
-        return;
-    }
-    
+
     ruta = "https://wordbitweb.000webhostapp.com//word-app.php?&callback=1";   
      $.ajax({
         type: 'GET',
